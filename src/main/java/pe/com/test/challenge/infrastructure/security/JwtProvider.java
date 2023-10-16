@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class JwtProvider {
 
-	private String secret = "challengetcs";
+	private String secret = "challengetcschallengetcschallengetcschallengetcschallengetcschallengetcs";
 	private Integer expiration = 3600;
 
 	private SecretKey getKey(String secret) {
@@ -48,7 +48,7 @@ public class JwtProvider {
 	}
 
 	public Boolean verify(String token) {
-		return getClaims(token).getExpiration().before(new Date());
+		return getClaims(token).getExpiration().after(new Date());
 	}
 
 }
