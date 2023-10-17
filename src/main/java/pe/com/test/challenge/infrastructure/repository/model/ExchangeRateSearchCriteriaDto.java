@@ -8,6 +8,6 @@ import lombok.ToString;
 @Getter
 @Setter
 public class ExchangeRateSearchCriteriaDto {
-	private String currencySource;
-	private String currencyTarget;
+    private String currencySource;
+    private String currencyTarget;
 }

@@ -4,7 +4,5 @@ import pe.com.test.challenge.domain.User;
 import reactor.core.publisher.Mono;
 
 public interface UserRepository {
-	Mono<User> findFirstByUsernameAndPassword(
-			String username, 
-			String password);
+    Mono<User> findFirstByUsernameAndPassword(String username, String password);
 }

@@ -5,5 +5,7 @@ import pe.com.test.challenge.infrastructure.repository.model.ExchangeRateSearchC
 import reactor.core.publisher.Mono;
 
 public interface ExchangeRateRepository {
-	Mono<ExchangeRateEntity> search(ExchangeRateSearchCriteriaDto exchangeRateSearchCriteriaDto);
+    Mono<ExchangeRateEntity> search(ExchangeRateSearchCriteriaDto exchangeRateSearchCriteriaDto);
+
+    Mono<ExchangeRateEntity> save(ExchangeRateEntity exchangeRateEntity);
 }

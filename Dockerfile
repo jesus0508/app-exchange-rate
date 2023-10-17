@@ -16,11 +16,8 @@ RUN ./mvnw clean package -DskipTests
 # Stage 2: Create the final image
 FROM openjdk:17-jdk-slim
 
-# Set the working directory in the final image
-WORKDIR /app
-
 # Copy the compiled JAR file from the builder stage to the final image
-COPY --from=builder /app/target/app-exchange-rate-*-SNAPSHOT.jar .
+COPY --from=builder /app/target/app-exchange-rate-*-SNAPSHOT.jar app-exchange-rate.jar
 
 # Define the command to run your Spring Boot application
 CMD ["java", "-jar", "app-exchange-rate.jar"]
